@@ -9,8 +9,7 @@
         if(item.length === 0){
             return
         }
-        console.log(item);
-        console.log('hello')
+
         store.addTodo(item) 
         todo.value = ''
     }
@@ -32,6 +31,9 @@ form {
 input {
   margin-top: 25px;
   margin-bottom: 15px;
+  padding: 2px;
+  border: 1px solid #ccc;
+  outline: none;
   height: 20px;
   width: 50%;
 }

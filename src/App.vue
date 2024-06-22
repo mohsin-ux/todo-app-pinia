@@ -12,7 +12,7 @@ import TodoApp from './components/TodoApp.vue'
   padding: 0;
 }
 #app{
-  background: #597d9a;
+  background: #597d;
   display: flex;
   justify-content: center;
   font-family: Avenir, Helvetica, Arial, sans-serif;

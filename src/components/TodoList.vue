@@ -1,14 +1,28 @@
 <script setup>
 import {useTodoListStore} from '../stores/todoList'
 import {storeToRefs} from 'pinia'
-
+import {onMounted, ref} from 'vue'
 
 const store = useTodoListStore()
-
 const { todoList } = storeToRefs(store)
 
+const todos =  ref([])
+const todoItem = JSON.parse(localStorage.getItem('todos'))
+
+
+onMounted(() => {
+    store.loadTodos()
+})
+
+
+// console.log(`todos ${todos[0]}`)
+
+
+
+
 const {toggleCompleted, deleteTodo} = store
-console.log('hello lists')
+
+// const todos = ref(localStorage.getItem())
 
 </script>
 <template>
@@ -41,6 +55,6 @@ span {
   justify-content: space-between;
   width: 80vw;
   padding: 5px;
-}
+}     
 
 </style>
